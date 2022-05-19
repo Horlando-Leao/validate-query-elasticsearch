@@ -1,2 +1,2 @@
-# validate-query-elastisearch
-validate query elastisearch example
+# validate-query-elasticsearch
+validate query elasticsearch example
