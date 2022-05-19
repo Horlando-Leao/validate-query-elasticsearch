@@ -1,5 +1,5 @@
-# validate-query-elasticsearch
-validate query elasticsearch example
+# validate-query-elasticsearch-python
+validate query elasticsearch example with Python
 
 I had a bit of trouble finding an implementation example, so since I did, I'll post it here to help.
 
