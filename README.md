@@ -5,7 +5,6 @@ I had a bit of trouble finding an implementation example, so since I did, I'll p
 
 ```python
 from elasticsearch import Elasticsearch
-from elasticsearch.client.indices import IndicesClient
 
 es = Elasticsearch(
     hosts=['localhost'],
@@ -14,8 +13,6 @@ es = Elasticsearch(
     port=9200,
     verify_certs=True
 )
-
-indices = IndicesClient(client=es)
 
 
 query = {
@@ -35,9 +32,9 @@ query = {
 
 query_string = "Developer AND \"Systems Analyst\" AND (java OR python)"
 
-validate_dict = indices.validate_query(index='my-index-test', body=query, doc_type='doc')
+validate_dict = es.indices.validate_query(index='my-index-test', body=query, doc_type='doc')
 print(validate_dict)
 
-validate_string = indices.validate_query(index='my-index-test', q=query_string, doc_type='doc')
+validate_string = es.indices.validate_query(index='my-index-test', q=query_string, doc_type='doc')
 print(validate_string)
 ```
